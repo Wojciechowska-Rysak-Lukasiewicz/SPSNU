@@ -1,0 +1,166 @@
+body {
+    background: rgb(204, 204, 202);
+    color: black;
+}
+
+h1 {
+    background: rgb(204, 204, 202);
+    color: rgb(9, 9, 14);
+    text-align: right;
+    font-weight: 100;
+    font-size: 40px;
+}
+
+h2 {
+    font-weight: 100;
+    font-size: 16px;
+    text-align: left;
+}
+
+h3 {
+    font-weight: 50;
+    font-size: 9px;
+    text-align: left;
+}
+
+#center {
+    position: fixed;
+    padding-top: 3px;
+    padding-right: 3px;
+    padding-bottom: 3px;
+    padding-left: 300px;
+}
+
+select {
+    direction: rtl;
+    vertical-align: 10px;
+    display: inline;
+    padding: 10px 10px 10px 900px;
+    padding-right: 5%;
+    font-weight: 100;
+    font-size: 16px;
+    color: #720202;
+    margin: 0px 15px;
+    text-transform: uppercase;
+    text-align-last: left;
+}
+
+option {
+    direction: ltr;
+}
+
+#box {
+    font-weight: 100;
+    font-size: 16px;
+    position: fixed;
+}
+
+#menu {
+    background: rgb(78, 78, 77);
+    height: 100vh;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    padding-top: 150px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+#menu ul {
+    list-style: none;
+    text-align: center;
+    padding: 0px;
+}
+
+#menu li {
+    margin: 30px auto;
+}
+
+#menu ul li a {
+    font-weight: 100;
+    font-size: 16px;
+    color: #720202;
+    text-decoration: none;
+    margin: 0px 15px;
+    text-transform: uppercase;
+}
+
+menu a:hover {
+    background: rgb(179, 179, 176);
+    color: rgb(90, 7, 7);
+    direction: initial;
+}
+
+menu a {
+    background: rgb(78, 78, 77);
+}
+
+.button {
+    background-color: rgb(141, 139, 139);
+    border: none;
+    color: rgb(104, 17, 17);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+input {
+    padding: 10px 10px 10px 800px;
+}
+
+form {
+    vertical-align: 10px;
+    display: inline;
+    padding: 10px 10px 10px 1000px;
+    padding-right: 5%;
+    color: #720202;
+    margin: 0px 15px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 734px) {
+    .div {
+        width: 550px;
+    }
+    .box {
+        width: 550px;
+        margin-right: 10px;
+    }
+    #menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .box {
+        width: 48%;
+        padding: 10px 0;
+        font-size: 140%;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 720px) {
+    body {
+        font-size: 13px;
+    }
+    h1 {
+        font-size: 23px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-device-width:480px) and (orientation:landscape) {
+    .html {
+        width: 350px;
+    }
+}
+
+.html {
+    width: 500px;
+}
