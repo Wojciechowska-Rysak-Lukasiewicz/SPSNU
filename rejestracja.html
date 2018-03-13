@@ -7,31 +7,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Rejestracja</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="CSS/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="CSS/menustyle.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
 </head>
 
 <body>
-    <div style="font-size: x-small;"></div>
-    <div id="main">
-        <div id="header">
-            <h1>
-                <center> REKRUTACJA ON-LINE - Wybor kierunkow </center>
-            </h1>
-        </div>
+    <div id="header">
+        <h1>
+            <center> REKRUTACJA ON-LINE - Wybor kierunkow </center>
+        </h1>
     </div>
 
-    <div id="menu">
+    <nav>
         <ul>
-            <li><a href="">Wybierz studia</a></li>
-            <li><a href="SPSNU\rejestracja.html">Rejestracja</a></li>
-            <li><a href="SPSNU\logowanie.html">Logowanie</a></li>
-            <li><a href="">Regulamin</a></li>
-            <li><a href="">Prośba o kontakt</a></li>
-            <li><a href="">Dane kontaktowe</a></li>
+            <li><a href="" rel="external">Wybierz studia</a></li>
+            <li><a href="rejestracja.html" rel="external">Rejestracja</a></li>
+            <li><a href="logowanie.html" rel="external">Logowanie</a></li>
+            <li><a href="" rel="external">Regulamin</a></li>
+            <li><a href="kontakt.html" rel="external">Napisz do nas</a></li>
+            <li><a href="" rel="external">Dane kontaktowe</a></li>
         </ul>
-    </div>
-    <div id="center">
+    </nav>
+    <section id="center">
         <h2>
             <p>Witamy w systemie rekrutacji on-line 2018/2019</p>
             <p>Aby zostać studentem, należy: </p>
@@ -41,48 +42,39 @@
             <p>Po zatwierdzeniu wniosku o przyjęcie na studia otrzymasz login i hasło do Wirtualnego Pokoju Studenta.</p>
             <p> Zapraszamy.</p>
         </h2>
-        <div class="box">
-            <h2>WYSZUKAJ KIERUNEK, SYSTEM LUB TRYB STUDIOW</h2>
+        <h2>WYSZUKAJ KIERUNEK, SYSTEM LUB TRYB STUDIOW</h2>
+        <div data-role="collapsible" data-collapsed-icon="carat-d" data-iconpos="right" data-expanded-icon="carat-u">
             <h2>KIERUNEK</h2>
-            <div class="list">
-                <select name="KIERUNEK">
-                                        <option value="informatyka">INFORMATYKA</option>
-                                        <option value="zarzadzanie">ZARZADZANIE</option>
-                                        <option value="architektura">ARCHITEKTURA</option>
-                                        <option value="transport">TRANSPORT</option>
-                                        <option value="anglistyka">ANGLISTYKA</option>
-                                        <option value="germanistyka">GERMANISTYKA</option>
-                                        <option value="administracja">ADMINISTRACJA</option>
-                                        <option value="biofizyka">BIOFIZYKA</option>
-                                        <option value="bioinzynieria">BIOINŻYNIERIA</option>
-                                </select>
-            </div>
-            <br/>
+            <ul data-role="listview" data-inset="false">
+                <li>INFORMATYKA</li>
+                <li>ZARZADZANIE</li>
+                <li>ARCHITEKTURA</li>
+                <li>ANGLISTYKA</li>
+                <li>BIOINŻYNIERIA</li>
+                <li>BIOCHEMIA</li>
+            </ul>
+        </div>
+        <div data-role="collapsible" data-collapsed-icon="carat-d" data-iconpos="right" data-expanded-icon="carat-u">
             <h2>SYSTEM</h2>
-            <div class="list">
-                <select name="SYSTEM">
-                                        <option value="magisterskie">Drugiego stopnia(uzuełniające magisterskie)</option>
-                                        <option value="inzyierskie">Pierszewgo stopnia(inżynierskie)</option>
-                                        <option value="licencjackie">Pierwszego stopnia(licencjackie)</option>
-                                        <option value="podyplomowe">Podyplomowe</option>
-                                </select>
-            </div>
-            <br/>
+            <ul data-role="listview" data-inset="false">
+                <li>Drugiego stopnia(uzuełniające magisterskie)</li>
+                <li>Pierszewgo stopnia(inżynierskie)</li>
+                <li>Pierwszego stopnia(licencjackie)</li>
+                <li>Podyplomowe</li>
+            </ul>
+        </div>
+        <div data-role="collapsible" data-collapsed-icon="carat-d" data-iconpos="right" data-expanded-icon="carat-u">
             <h2>TRYB STUDIOW</h2>
-
-            <div class="list">
-                <select name="TRYB STUDIOW">
-                                        <option value="stac">Stacjonarne</option>
-                                        <option value="niestac">Niestacjonarne</option>
-                                        <option value="online">Przez internet</option>
-                                        <option value="podyplomowe">Podyplomowe</option>
-                                </select>
-            </div>
+            <ul data-role="listview" data-inset="false">
+                <li>STACJONARNE</li>
+                <li>NIESTACJONARNE</li>
+                <li>PRZEZ INTERNET</li>
+                <li>PODYPLOMOWE</li>
+            </ul>
         </div>
         <br/>
-        <br/>
-        <button class="button"><a href="rejestracja-dane.html">Przejdz  dalej</a></button>
-    </div>
+        <a href="rejestracja-dane.html" class="ui-btn ui-btn-inline" rel="external">Przejdz dalej</a>
+    </section>
 </body>
 
 </html>

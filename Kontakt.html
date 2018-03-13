@@ -5,7 +5,7 @@
     <meta http-equiv="content-language" content="pl">
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Logowanie</title>
+    <title>Kontakt</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="CSS/main.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="CSS/menustyle.css" />
@@ -18,9 +18,10 @@
 <body>
     <div id="header">
         <h1>
-            <center> Logowanie </center>
+            <center> Napisz do nas </center>
         </h1>
     </div>
+
     <nav>
         <ul>
             <li><a href="" rel="external">Wybierz studia</a></li>
@@ -32,26 +33,32 @@
         </ul>
     </nav>
     <div id="center">
-        <form action="action_page.php">
-            <div class="container">
-                <label for="pesel"><b>Pesel:</b></label>
-                <input type="text" placeholder="Wpisz pesel" name="pesel" minlength="11" maxlenght="11" required>
+        <div class="container">
+            <form action="action_page.php">
 
-                <label for="psw"><b>Hasło: </b></label>
-                <input type="password" placeholder="Wpisz hasło" name="psw" required>
+                <label for="fname">Imię:</label>
+                <input type="text" id="fname" name="firstname" placeholder="Twoje imię.." maxlength="30">
 
-                <button type="submit">Zaloguj się</button>
-                <label>
-                <input type="checkbox" checked="checked" name="remember"> Zapamietaj mnie
-              </label>
-            </div>
+                <label for="lname">Nazwisko:</label>
+                <input type="text" id="lname" name="lastname" placeholder="Twoje nazwisko.." maxlength="40">
 
-            <div class="container" style="background-color:#f1f1f1">
-                <button type="button" class="cancelbtn">Wyjdź</button>
-                <span class="psw">Zapomniałeś <a href="#">hasła?</a></span>
-            </div>
-        </form>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Twoj adres email..." required>
+
+                <label for="country">Kraj</label>
+                <select id="country" name="country">
+                        <option value="polska">Polska</option>
+                        <option value="ukraina">Ukraina</option>
+                        <option value="usa">USA</option>
+                      </select>
+
+                <label for="subject">Temat</label>
+                <textarea id="subject" name="subject" placeholder="Napisz cos..." style="height:400px"></textarea>
+                <input type="submit" value="Wyślij" a href="akaivel@gmail.com" rel="external">
+
+            </form>
+        </div>
     </div>
 </body>
 
-</html>
+</html>s

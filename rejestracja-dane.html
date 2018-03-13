@@ -6,60 +6,65 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Rejestracja</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="CSS/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="CSS/menustyle.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
 </head>
 
 <body>
-    <div style="font-size: x-small;"></div>
-    <div id="main">
-        <div id="header">
-            <h1>
-                <center> REKRUTACJA ON-LINE - rejestracja </center>
-            </h1>
-        </div>
+    <div id="header">
+        <h1>
+            <center> REKRUTACJA ON-LINE - rejestracja </center>
+        </h1>
     </div>
-
-    <div id="menu">
+    <nav>
         <ul>
-            <li><a href="">Wybierz studia</a></li>
-            <li><a href="rejestracja.html">Rejestracja</a></li>
-            <li><a href="logowanie.html">Logowanie</a></li>
-            <li><a href="">Regulamin</a></li>
-            <li><a href="">Prośba o kontakt</a></li>
-            <li><a href="">Dane kontaktowe</a></li>
+            <li><a href="" rel="external">Wybierz studia</a></li>
+            <li><a href="rejestracja.html" rel="external">Rejestracja</a></li>
+            <li><a href="logowanie.html" rel="external">Logowanie</a></li>
+            <li><a href="" rel="external">Regulamin</a></li>
+            <li><a href="kontakt.html" rel="external">Napisz do nas</a></li>
+            <li><a href="" rel="external">Dane kontaktowe</a></li>
         </ul>
-    </div>
-    <div id="center">
+    </nav>
+    <section id="center">
         <h2>
-            <form method="POST" action="rejestracja.php">
-                <br>
-                <b>PESEL:</b><br>
-                <input type="number" name="login" required><br><br>
-                <b>Hasło:</b><br>
-                <input type="password" name="haslo1" required><br><br>
-                <b>Powtórz hasło:</b><br>
-                <input type="password" name="haslo2" required><br><br>
-                <b>Email:</b><br>
-                <input type="text" name="email" required><br><br>
-                <b>Telefon:</b><br>
-                <input type="number" name="number" required><br>
-                <h3><input type="checkbox" value="checked" name="regulation" /> Oświadczam, że zapoznałem się i akceptuję cały regulamin elektronicznej rejestracji kandydatów na studia.</h3>
-                <h3><input type="checkbox" value="checked" name="agreement" /> Wyrażam zgodę na otrzymywanie informacji handlowych za pośrednictwem poczty elektronicznej oraz wiadomości SMS (Short Message Service) zgodnie z Ustawą z dnia 18 lipca 2002 r.o
-                    świadczeniu usług drogą elektroniczną (Dz.U. 2013.1422 j.t).*</h3>
-                <h3><input type="checkbox" value="checked" name="agreement2" /> Wyrażam zgodę na przetwarzanie moich danych osobowych w celach marketingowych i promocyjnych.</h3>
-                <br />
-                <button class="button" input type="submit" value="Utwórz konto" name="rejestruj" onclick=" if(!this.form.regulation.checked)
-                {
-                    alert('Musisz zaakceptować regulamin.');
-                    return false;
-                }">Utwórz konto</button><br>
+            <form action="action_page.php" style="border:1px solid #ccc">
+                <div class="container">
+                    <p>Wypełnij poniższe dane aby założyć konto.</p>
+                    <hr>
+                    <label for="pesel"><b>Pesel:</b></label>
+                    <input type="text" placeholder="Wpisz pesel" name="pesel" minlength="11" maxlength="11" required>
+
+                    <label for="email"><b>Email:</b></label>
+                    <input type="email" placeholder="Wpisz adres email" name="email" maxlength="45" required>
+
+                    <label for="psw"><b>Hasło:</b></label>
+                    <input type="password" placeholder="Wpisz hasło" name="psw" minlength="5" maxlength="40" required>
+
+                    <label for="psw-repeat"><b>Powtorz hasło:</b></label>
+                    <input type="password" placeholder="Powtorz hasło" name="psw-repeat" required>
+
+                    <label for="number"><b>Numer: </b></label>
+                    <input type="tel" placeholder="Wpisz numer kontaktowy" name="number" minlength="9" maxlength="9" required>
+                    <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                  </label>
+
+                    <p>Tworząc konto zakceptujesz nasz <a href="#" style="color:dodgerblue"> regulamin</a>.</p>
+
+                    <div class="clearfix">
+                        <button type="submit" class="signupbtn">Rejestruj</button>
+                        <button type="button" class="cancelbtn">Wyjdź</button>
+                    </div>
+                </div>
             </form>
         </h2>
-        <div class="box">
-        </div>
-    </div>
+    </section>
 </body>
 
 </html>
